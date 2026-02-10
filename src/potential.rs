@@ -193,8 +193,8 @@ pub fn dipole(
 ///
 /// Factorial of n
 pub fn fac(n: i32) -> Result<i32, &'static str> {
-    if n <= 0 {
-        return Err("fac: Bad argument detected! n <= 0");
+    if n < 0 {
+        return Err("fac: Bad argument detected! n < 0");
     }
 
     if n == 0 || n == 1 {
@@ -349,9 +349,10 @@ mod tests {
 
     #[test]
     fn test_fac() {
+        assert_eq!(fac(0).unwrap(), 1);
         assert_eq!(fac(1).unwrap(), 1);
         assert_eq!(fac(5).unwrap(), 120);
-        assert!(fac(0).is_err());
+        assert!(fac(-1).is_err());
     }
 
     #[test]

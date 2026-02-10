@@ -206,8 +206,8 @@ def fac(n: int) -> int:
     int
         Factorial of n
     """
-    if n <= 0:
-        raise ValueError('fac: Bad argument detected! n <= 0')
+    if n < 0:
+        raise ValueError('fac: Bad argument detected! n < 0')
     
     if n == 0 or n == 1:
         return 1
