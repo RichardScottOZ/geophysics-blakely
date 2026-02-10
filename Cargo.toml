@@ -1,0 +1,7 @@
+[package]
+name = "geophysics_blakely"
+version = "0.1.0"
+edition = "2021"
+authors = ["Victor Carreira (Original Fortran)", "Rust Port 2026"]
+
+[dependencies]
